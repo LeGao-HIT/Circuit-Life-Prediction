@@ -1,10 +1,5 @@
 #####
-'''
-6月21日，完成所有的修改，实现：
-1. 发现了之前一直没发现的错误，错误在于公式拟合训练那里，成功修改🚑
-2. 可以使用增量型数据进行公式拟合了。
 
-'''
 #####
 
 
@@ -1986,8 +1981,8 @@ else:
     # -----------------------
     model = st.session_state["rul_model"]
     cfg = st.session_state.get("rul_cfg", {})
-    lookback = int(cfg.get("lookback", 10))
-    horizon  = int(cfg.get("horizon", 5))
+    lookback = int(cfg.get("lookback", 5))
+    horizon  = int(cfg.get("horizon", 2))
     fusion_mode_cfg = cfg.get("fusion_mode", "残差学习（y = y_phys + Δy_ml）")
     beta0_mode_cfg  = cfg.get("beta0_mode", "zero")
 
