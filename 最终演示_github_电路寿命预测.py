@@ -20,7 +20,7 @@ from pathlib import Path
 if 'first_part_completed' not in st.session_state:
     st.session_state['first_part_completed'] = False
 # Streamlit 应用标题
-st.title('📟电路可靠性预测')
+st.title('✨ 电路寿命预测')
 st.subheader("一、数据选取")
 # 文件上传
 # 文件上传（可选）+ 默认加载仓库示例文件
@@ -2441,3 +2441,4 @@ else:
             st.info("暂无可绘图数据：请先点击上面的“📌 预测电路级 RUL”。")
     else:
         st.info("参数已变更或尚未预测：请点击上面的“📌 预测电路级 RUL”生成结果与图。")
+
