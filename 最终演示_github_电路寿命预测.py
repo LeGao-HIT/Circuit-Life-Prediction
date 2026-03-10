@@ -1314,7 +1314,7 @@ model_type = st.selectbox("选择预测模型", ["RNN", "LSTM", "Transformer"], 
 
 # ---------- 训练设置 ----------
 st.markdown("#### 6.1 训练与验证设置")
-lookback = st.number_input("输入序列长度 lookback", min_value=3, max_value=200, value=10, step=1)
+lookback = st.number_input("输入序列长度 lookback", min_value=3, max_value=200, value=5, step=1)
 horizon = st.number_input("预测步长 horizon（一次预测未来点数）", min_value=1, max_value=200, value=5, step=1)
 
 batch_size = st.number_input("batch size", min_value=8, max_value=2048, value=64, step=8)
@@ -2441,4 +2441,5 @@ else:
             st.info("暂无可绘图数据：请先点击上面的“📌 预测电路级 RUL”。")
     else:
         st.info("参数已变更或尚未预测：请点击上面的“📌 预测电路级 RUL”生成结果与图。")
+
 
